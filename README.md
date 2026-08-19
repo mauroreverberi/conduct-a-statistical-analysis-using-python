@@ -6,7 +6,7 @@
 ## Project Description
 I analyze new company registrations in the Swiss canton of Basel-Landschaft and ask one question. Did the share of stock corporations (Aktiengesellschaft, AG) among new company registrations change between 2017 and 2025?
 
-The question connects to my first capstone project, where I analyzed the Swiss entries of the global LEI dataset and found that the AG / SA is the largest legal form group in that register. The two projects use different datasets and different populations, so their percentages must not be compared directly. Project 1 looked at the stock of LEI-registered entities, this project looks at single new registrations published in the SHAB for one canton.
+The question connects to my first capstone project, where I analyzed the Swiss entries of the global LEI dataset and found that the AG / SA is the largest legal form group in that register. The two projects use different datasets and different populations, so their percentages must not be compared directly. Project 1 looked at the stock of LEI-registered entities, this project looks at individual new registrations published in the SHAB for one canton.
 
 ## What Was Built
 - A Jupyter notebook (`analysis.ipynb`) with the whole analysis: loading
@@ -44,12 +44,15 @@ Between 2017 and 2025 the yearly number of new registrations grew from
 absolute number of AG registrations stayed almost constant (185 vs 184).
 A simulation-based two-sided test (100,000 simulations, seed 42) rejects
 the hypothesis of an equal AG share in both years, with p = 0.0182 at
-alpha = 0.05. The comparison is observational, so the data does not tell
+alpha = 0.05, and a simulated 95% confidence interval puts the difference
+between -5.98 and -0.54 percentage points. A descriptive check of the
+inner year pairs (2018 vs 2024, 2019 vs 2023) shows the same downward
+direction. The comparison is observational, so the data does not tell
 me why the share fell.
 
 ## How to Run the Project
 1. Clone this repository.
-2. Create and activate a virtual environment (Python 3.12 or newer):
+2. Create and activate a virtual environment (Python 3.12 or newer, tested with 3.14):
    ```
    python -m venv .venv
    source .venv/bin/activate   # on Windows: .venv\Scripts\activate
