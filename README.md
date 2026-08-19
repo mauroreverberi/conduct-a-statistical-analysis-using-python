@@ -30,9 +30,6 @@ included in this repository. I downloaded it on 2026-08-13 through the
 direct CSV export:
 https://data.bl.ch/explore/dataset/12460/download/?format=csv
 
-SHA-256 of the frozen file:
-`7583eb3569ba895e479571b09465372ad9809f62681a3f3f0ececcf3c03bfc41`
-
 Note: the online dataset is updated continuously, so a fresh download can
 give different numbers than the snapshot used in this project. The notebook
 therefore reads only the frozen local copy, which keeps every result
